@@ -1,0 +1,52 @@
+<view wx:for="{{goods_list}}" wx:key="gid" data-index="{{item.gid}}">
+  <scroll-view class="image-group" scroll-x="true">
+    <image src="{{item.gimg}}" />
+    <image src="{{item.gimg1}}" />
+    <image src="{{item.gimg2}}" />
+  </scroll-view>
+
+  <view class="goods_title">
+    <view class="goods_name">{{item.gname}}</view>
+    <view class="goods_price">￥{{item.oprice}}<text class="goods_price1">尝鲜价</text><text
+        class=".goods_price2">￥{{item.iprice}}</text>
+      <text class="goods_price3">摊主：{{item.gtitle}}</text>
+    </view>
+
+    <view class="goods_index">
+      <view class="goods_collect" bindtap="tuijian">
+        <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/Dffumd.png" />推荐
+      </view>
+      <view class="goods_quan" bindtap="get">
+        <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/Df46eJ.png" />领券
+      </view>
+      <view class="goods_share" bindtap='share'>
+        <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/DffZlD.png" />分享
+      </view>
+    </view>
+  </view>
+
+  <view class="goods_appraise">
+    <view class="goods_appraise1">—————— 宝贝详情 ——————</view>
+    <image mode="widthFix" src="{{item.gimgfj}}" class="goods_img" />
+    <image mode="widthFix" src="{{item.gimg}}" class="goods_img" />
+    <image mode="widthFix" src="{{item.gimg1}}" class="goods_img" />
+    <image mode="widthFix" src="{{item.gimg2}}" class="goods_img" />
+    <image mode="widthFix" src="{{item.gimgfj2}}" class="goods_img" />
+  </view>
+
+  <view class="adddetail">
+    <view class="collect" bindtap="collect">
+      <image mode="widthFix" src="{{src}}" />
+      <view class="collect1">收藏</view>
+    </view>
+    <view class="collect">
+      <contact-button type="default-dark" size="20" session-from="weapp"></contact-button>
+      <view class="collect1">客服</view>
+    </view>
+    <view class="collect" bindtap='share'>
+      <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/DhSmjJ.png" />
+      <view class="collect1" >分享</view>
+    </view>
+    <button class="add_icon" bindtap="shop">加入购物车</button>
+  </view>
+</view>

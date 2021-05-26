@@ -1,0 +1,29 @@
+<!--推广邀请-->
+<view class="img-bac">
+  <image src="https://s3.ax1x.com/2020/11/19/DurnqU.png"></image>
+</view>
+<view class="app_info_wrap">
+  <view class="app_info_item app_info_contact">
+    <icon class="iconfont icon-jine left"></icon>
+    <navigator class="left">累计赚取</navigator>
+    <navigator id="invite_blue" class="right ">￥666</navigator>
+  </view>
+  <view class="app_info_item app_info_contact">
+    <icon class="iconfont icon-user1 left"></icon>
+    <navigator class="left">共引荐用户</navigator>
+    <navigator class="right">5人</navigator>
+  </view>
+  <view class="app_info_item">
+    <icon class="iconfont icon-weibiaoti- left"></icon>
+    <navigator class="left">银行卡管理</navigator>
+  </view>
+  <view class="app_info_item app_info_contact">
+    <icon class="iconfont icon-share left"></icon>
+    <navigator class="left">我的推荐码</navigator>
+    <navigator id="invite_money" class="right">去邀请拿佣金</navigator>
+  </view>
+</view>
+
+<button>邀请赚钱</button>
+
+<view id="footer">体现记录/合作指南</view>

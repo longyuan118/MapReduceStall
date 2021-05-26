@@ -1,0 +1,73 @@
+{
+  "pages":[
+    "pages/stall/stall",
+    "pages/appoint/appoint",
+    "pages/goods/goods",
+    "pages/show_goods/show_goods",
+    "pages/collect/collect",
+    "pages/owner/owner",
+    "pages/new_goods/new_goods",
+    "pages/show_new_goods/show_new_goods",
+    "pages/show_stall/show_stall",
+    "pages/invite/invite",
+    "pages/category/category",
+    "pages/citys/citys",
+    "pages/shouhou/shouhou",
+    "pages/map/map",
+    "pages/community/community",
+    "pages/shopping/shopping",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/share/share",
+    "pages/oder/oder"
+    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "摊一点",
+    "navigationBarTextStyle":"black"
+    
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/stall/stall",
+        "text": "摊点",
+        "iconPath": "icons/stall.png",
+        "selectedIconPath": "icons/stall-o.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "广场",
+        "iconPath": "icons/community.png",
+        "selectedIconPath": "icons/community-o.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "icons/shopping.png",
+        "selectedIconPath": "icons/shopping-o.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

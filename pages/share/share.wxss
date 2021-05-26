@@ -1,0 +1,108 @@
+.index{
+  /* background-color: #FBF9FE; */
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  flex: 1;
+  /* min-height: 100%; */
+  font-size: 32rpx;
+}
+.head{
+  position: relative;
+  display: flex;
+flex-direction: row;
+  padding-bottom: 50rpx;
+  line-height: 1;
+}
+.body{
+    padding: 20rpx 0 20rpx 20rpx;
+    line-height: 1;
+}
+.sct{
+  position: absolute; 
+  right:40%;
+  left:40%;
+  font-size: 35rpx;
+  text-align: center;
+  padding-top: 15rpx;
+}
+.sc2{
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+.btn3{
+  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  right: 20rpx; /* 靠右调节 */
+  background-color: #EDE100;
+  position: absolute;
+  border-radius: 30px;
+  height: 58rpx;
+  line-height:58rpx;
+  /* padding-bottom: 54rpx; */
+}
+.sccv{
+padding: 10rpx;
+color: #6C6C6C;
+background-color: #fff;
+height:350rpx;
+}
+.scct{
+  width: 100%;
+  position: relative;
+}
+
+ .scm{
+  position: absolute;
+  top: 130rpx;
+  font-size: 25rpx;
+ }
+.cimage{
+  padding-top: 30rpx;
+  width: 40px;
+  height: 20px;
+}
+.cimage1{
+  padding:10px 8px 0px 6px;
+  width: 20px;
+  height: 20px;
+}
+.cimage2{
+  padding:10px 8px 0px 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.sc{
+  flex-direction: column; 
+ display: flex;
+font-size: small;
+font-weight: 500;
+color: #6e6c6c;
+}
+.sadd{
+/* width: 100%;  */
+height: 160rpx;
+}
+.ssa{
+  display: flex;
+  flex-direction: row;
+}
+.btn{
+  background-color:rgb(223, 221, 221);
+}
+.img{ 
+  padding-left: 10rpx;
+  height: 100px;
+  width: 25%;
+}
+.btn1{
+color: white;
+/* margin-top: 150px; */
+}
+.foot{
+  position: fixed; 
+  bottom: 0;
+}

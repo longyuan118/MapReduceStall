@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="separate"></view>
+
+  <view class="order" >
+    <text class="myorder-text">我的订单</text>
+    <text class="myorderlook-text">查看全部订单</text>
+    <image class="next-image" src="https://s3.ax1x.com/2020/11/18/DmQ3ZD.png"></image>
+  </view>
+  
+  <view class="line"></view>
+
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="separate"></view>
+
+  <view class="person-list">
+
+    <view class="list-item" bindtap="stall">
+      <image class="item-image" src="https://s3.ax1x.com/2020/12/22/rsFO2V.png" ></image>
+      <text class="item-text">我预约的摊位</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap="collect">
+      <image class="item-image" src="https://s3.ax1x.com/2020/11/18/DmQjOK.png" ></image>
+      <text class="item-text">我的收藏</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item">
+      <image class="item-image" src="https://s3.ax1x.com/2020/11/18/DmQzwD.png"></image>
+      <text class="item-text">收货地址</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap="shouhou">
+      <image class="item-image" src="https://s3.ax1x.com/2020/11/18/DmlSTe.png"></image>
+      <text class="item-text">售后记录</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item">
+      <image class="item-image" src="https://s3.ax1x.com/2020/12/22/rskC5R.png"></image>
+      <text class="item-text">我的评价</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap="invite">
+      <image class="item-image" src="https://s3.ax1x.com/2020/11/18/DmlZm8.png"></image>
+      <text class="item-text">推广邀请</text>
+    </view>
+    
+    <view class="person-line"></view>
+  </view>
+  
+  <view class="separate"></view>
+  
+</view>

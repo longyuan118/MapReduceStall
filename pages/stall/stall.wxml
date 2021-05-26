@@ -1,0 +1,119 @@
+<view class="pyg_index" style="{{custom?'padding-top:'+custom.top+'px':''}}">
+  <view class="search_input">
+    <view class="search_adrress" bindtap="search_citys">{{citys}}
+      <image src="https://s3.ax1x.com/2020/11/18/DmanKJ.png" class="item-image"></image>
+    </view>
+    <SearchInput></SearchInput>
+  </view>
+  <!--轮播图 开始-->
+  <view class="index_swiper">
+    <swiper autoplay interval="2000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ff0094">
+      <swiper-item>
+        <image mode="widthFix" src="https://ftp.bmp.ovh/imgs/2021/03/1acee3e030903570.jpg" />
+      </swiper-item>
+      <swiper-item>
+        <image mode="widthFix" src="https://ftp.bmp.ovh/imgs/2021/03/391aad299b473d66.jpg" />
+      </swiper-item>
+      <swiper-item>
+        <image mode="widthFix" src="https://ftp.bmp.ovh/imgs/2021/03/ea6419632be8c32f.jpg" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--轮播图 结束-->
+
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+      <!--分类导航开始url="/pages/category/category"-->
+      <view class="index_cate">
+        <view wx:for="{{catesList}}" wx:key="cname" bindtap="catesList_navigater" data-index="{{item.cid}}">
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </view>
+      </view>
+      <!--分类导航结束-->
+      <!--楼层开始-->
+      <view class="index_floor">
+        <!-- 一层 -->
+        <view wx:for="{{floorList}}" wx:for-item="item"  wx:key="floor_title" data-index="{{item.fname}}" bindtap="fimg">
+          <view wx:if="{{item.fid==1}}" >
+            <image mode="widthFix" src="{{item.fimg}}" />
+          </view>
+          <view class="floor_group" >
+            <view wx:if="{{item.fid==4}}" class="floor_title">
+              <image  src="{{item.fimg}}" />
+            </view>
+            <view class="floor_index">
+              <view wx:if="{{item.fid<=8&&item.fid>4}}">
+                <image mode="widthFix" src="{{item.fimg}}" />
+              </view>
+            </view>
+          </view>
+        </view>
+        
+        <!-- 二层 -->
+        <view wx:for="{{floorList}}" wx:for-item="item1"  wx:key="floor_title" data-index="{{item1.fname}}" bindtap="fimg">
+          <view wx:if="{{item1.fid==2}}">
+            <image mode="widthFix" src="{{item1.fimg}}" />
+          </view>
+          <view class="floor_group">
+            <view wx:if="{{item1.fid==9}}" class="floor_title">
+              <image  src="{{item1.fimg}}" />
+            </view>
+            <view class="floor_index">
+              <view wx:if="{{item1.fid<=13&&item1.fid>=10}}">
+                <image mode="widthFix" src="{{item1.fimg}}" />
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <!-- 三层 -->
+        <view wx:for="{{floorList}}" wx:for-item="item2"  wx:key="floor_title" data-index="{{item2.fname}}" bindtap="fimg">
+          <view wx:if="{{item2.fid==3}}">
+            <image mode="widthFix" src="{{item2.fimg}}" />
+          </view>
+          <view class="floor_group">
+            <view wx:if="{{item2.fid==14}}" class="floor_title">
+              <image  src="{{item2.fimg}}" />
+            </view>
+            <view class="floor_index">
+              <view wx:if="{{item2.fid<=18&&item2.fid>14}}">
+                <image mode="widthFix" src="{{item2.fimg}}" />
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <!--楼层结束-->
+    </block>
+
+    <block wx:elif="{{tabs[1].isActive}}">
+      <view wx:for="{{postList}}" wx:key="{{item.id}}" class="club" bindtap="club" data-index="{{item.lid}}">
+        <view class="img">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="msg">
+          <view class="name">{{item.name}}</view>
+          <view class="msg1">评分 <text class="score">{{item.score}}</text></view>
+          <view class="msg1">已有摊位: <text class="h_stall">{{item.h_stall}}</text></view>
+          <view class="msg1">剩余摊位: <text class="s_stall">{{item.s_stall}}</text></view>
+          <view class="time"> {{item.last_time}}</view>
+        </view>
+        <button class="mini-btn" type="{{type}}" size="mini">预约</button>
+      </view>
+    </block>
+
+    <block wx:elif="{{tabs[2].isActive}}">
+      <map id="map" latitude="{{latitude}}" longitude="{{longitude}}" controls="{{controls}}"
+        bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
+        bindregionchange="regionchange" scale="15" show-location enable-traffic="true" bindmarkertap="stall"
+        enable-building="true">
+      </map>
+
+      <menu bindmenuItemClick="menuItemClick" mainmodel="{{mainmodel}}" menulist="{{menulist}}"></menu>
+    </block>
+  </Tabs>
+
+
+
+</view>

@@ -1,0 +1,47 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <scroll-view class="scrol_view_style" scroll-x="{{false}}" scroll-y="{{true}}">
+    <view wx:for-items="{{goods_list}}" class="list_item_style" wx:key="{{ index }}">
+      <checkbox-group bindchange="checkboxChange" style="height:100%" data-index="{{index}}"
+        data-checks="{{item.checks}}">
+        <view class="carts_box">
+
+          <checkbox value="{{item.sid}}" checked="{{item.checks}}" class="checkbox_one" data-index="{{index}}"
+            bindtap="allCheckbox" />
+          <image src="{{item.simg}}" class="good_main_image"></image>
+          <view class="cart_content_right">
+            <text class="item_good_title">{{item.sname}}</text>
+            <view class="price_back_view">
+              <!-- <text class='guige'>规格: {{item.option[index].value}}</text> -->
+              <text class="right_list_item_price">¥{{item.price}}</text>
+            </view>
+            <view class="cart_content_bottom">
+              <view class='btn_wrap'>
+                <!-- <image src="/images/reduce.png" class = "reduce_image_style" id = "{{index}}" bindtap = "reduceButtonClick"></image>  -->
+                <input type='text' value='-' disabled='true' id="{{index}}" bindtap="reduceButtonClick"></input>
+                <input type='text' value="{{item.count}}" />
+                <!-- <image src="/images/add.png" class = "add_image_style" id = "{{index}}" bindtap = "addButtonClick"></image> -->
+                <input type='text' value='+' disabled='true' id="{{index}}" bindtap="addButtonClick"></input>
+              </view>
+              <view class="delete" bindtap="deleteGoods">删除</view>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+    <view class='buy_shop'>
+      <view class="select_allbox">
+        <checkbox value="{{item.name}}" checked="{{checked}}" style='margin-left:20rpx;' bindtap='setChecked' />
+        <text>全选</text>
+      </view>
+      <text class='heji'>合计:<text class='all_shop_price'>￥{{total_all_price}}</text></text>
+      <view class='jiesuan' bindtap="toBuy">
+        <text>结算</text>
+      </view>
+    </view>
+    <view style="height:10px;background-color:#F5F5F5;width:100%"></view>
+    <view class='no_shop' wx:if="{{is_shop}}">
+      <text>购物车中没有商品</text>
+    </view>
+  </scroll-view>
+</view>

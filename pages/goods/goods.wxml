@@ -1,0 +1,27 @@
+<view class="collect" wx:for="{{searchResult}}" data-index="{{item.gid}}" bindtap="buy">
+  <view>
+    <image mode="widthFix" src="{{item.gimg}}"></image>
+  </view>
+  <view>
+    <view class="cname">{{item.gname}}</view>
+    <view class="collect2">
+      <view class="cprice">¥{{item.iprice}}
+
+      </view>
+      <text class="youhui">
+        {{item.oprice}}
+      </text>
+    </view>
+
+
+
+    <view class="collect1">
+      <view class="title">摊主:{{item.gtitle}}</view>
+      <view class="top">销量:{{item.gtop}}</view>
+      <view class="place">宁波</view>
+
+    </view>
+
+  </view>
+
+</view>

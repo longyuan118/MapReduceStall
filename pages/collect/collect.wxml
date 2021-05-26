@@ -1,0 +1,38 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view wx:for="{{alls}}" wx:key="cid" wx:if="{{item.ckey==0}}" data-index="{{item.cid}}" data-index1="{{item.collect_goods_id}}" bindlongtap="collect" bindtap="collect2">
+      <view class="collect">
+        <image  src="{{item.cimg}}" />
+        <view>
+          <view class="cname">{{item.cname}}</view>
+          <view class="cprice">￥{{item.cprice}}</view>
+          <view class="collect1">
+            <contact-button type="default-dark" size="20" session-from="weapp">客服</contact-button>
+            <view bindtap="share" >
+              <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/DhSmjJ.png" />分享
+            </view>3
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">
+    <view wx:for="{{alls}}" wx:key="cid" wx:if="{{item.ckey==1}}" data-index="{{item.cid}}" data-index1="{{item.collect_goods_id}}" bindlongtap="collect" bindtap="collect3">
+      <view class="collect">
+        <image mode="widthFix" src="{{item.cimg}}" />
+        <view>
+          <view class="cname">{{item.cname}}</view>
+          <view class="cstall">剩余摊位{{item.cstall}}</view>
+          <view class="collect1">
+            <view bindtap="collect1">
+              <contact-button type="default-dark" size="20" session-from="weapp">客服</contact-button>
+            </view>
+            <view bindtap="share" >
+              <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/DhSmjJ.png" />分享
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</Tabs>

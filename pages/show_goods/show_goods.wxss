@@ -1,0 +1,154 @@
+page {
+  background-color: #393941;
+}
+
+.goods {
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+swiper-item image {
+  width: 98%;
+  /* border-radius: 5%; */
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  /* text-align: center; */
+  /* height: 800px; */
+}
+
+.goods_title {
+  background-color: #fff;
+  width: 98%;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+.goods_name {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.goods_price {
+  color: red;
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.goods_price1 {
+  color: red;
+  font-size: 18px;
+}
+
+.goods_price2 {
+  color: #000;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.goods_price3 {
+  color: #000;
+  font-size: 14px;
+  padding-left: 130px;
+  /* text-align: right; */
+}
+
+.goods_youhui {
+  padding-left: 10px;
+  background-color: #e0c9a7;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.goods_youhui1 {
+  font-size: 24px;
+  margin-top: 12px;
+}
+.goods_youhui2{
+  margin-right: 30px;
+}
+.goods_youhui3 {
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.goods_youhui4 {
+  font-size: 14px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.goods_youhui5 {
+  /* margin-left: 45px; */
+  margin-top: 16px;
+}
+
+.goods_order {
+  margin-top: 10px;
+}
+
+.goods_order button {
+  border-radius: 30px;
+  background-color: #bf9d6f;
+  color: #fff;
+  font-size: 15px;
+}
+
+.goods_date {
+  float: right;
+}
+
+.goods_date text {
+  font-size: 14px;
+  padding-right: 3px;
+  color: #949690;
+}
+
+/* 附近css */
+.club{
+  display: flex;
+  font-size:16px;
+  border-bottom:1px solid #E0E3DA;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-top: 2px;
+}
+.img image{
+  width: 80px;
+  height: 135px;
+  border-radius: 5px;
+}
+.msg{
+  margin-left: 20px;
+  /* margin-top: 10px; */
+}
+.name{
+  font-size:18px;
+}
+.h_stall{
+  color: blue;
+}
+.s_stall{
+  color: red;
+}
+.msg1{
+  margin-top: 4px;
+  color: #666;
+}
+.score{
+  color: #fea54b;
+}
+.time{
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.mini-btn{
+  height: 35px;
+  margin-top: 15%;
+  margin-right: 10px;
+}

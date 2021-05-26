@@ -1,0 +1,42 @@
+<!--售后/退换-->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+<!--售后申请-->
+<view hidden="{{currentTab!==0}}">
+</view>
+ 
+<!--处理中-->
+<view hidden="{{currentTab!==1}}">
+</view>
+ 
+<!--售后评价-->
+<view hidden="{{currentTab!==2}}">
+</view>
+
+<!--申请记录-->
+<view hidden="{{currentTab!==3}}">
+</view>
+
+<!--搜索框-->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" 
+                    placeholder="商品名称/商品编号/订单编号/序列号"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>
+             筛选
+            </view> 
+        </view>
+    </view>
+</view>
+

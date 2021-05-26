@@ -1,0 +1,52 @@
+@import"../../icons/iconfont.wxss";/* 引入外部图标cwss文件 */
+.img-bac{
+  background-color:#F5F5F5;
+  text-align: center;
+  padding: 3vw;
+}
+image{
+  width: 90%;
+  border-radius: 4vw;
+}
+.app_info_wrap{
+  margin-left: 30px;
+  font-size: 5vw;
+  width:90%;
+}
+.app_info_item{
+padding-top: 5vw;
+padding-bottom: 13vw;
+border-bottom: dimgrey solid 1px;
+}
+/*
+.app_info_contact{
+  display: flex;
+  justify-content: space-between;
+}/*两端文字居中*/
+
+#invite_money{
+   color: grey;
+}
+#invite_blue{
+   color: brown ;
+}
+.left{
+  float: left;
+  padding-left: 2vw;
+}
+.right{
+  float: right;
+}
+
+button{
+  background-color:#ea513f;
+  color: azure;
+  margin-top: 8vw;
+}
+
+#footer{
+  text-align: center;
+  color: gray;
+  font-size: 3vw;
+  margin-top: 2vw;
+}

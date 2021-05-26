@@ -1,0 +1,11 @@
+<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" controls="{{controls}}"
+bindcontroltap="controltap" markers="{{markers}}"  bindmarkertap="markertap" polyline="{{polyline}}"
+bindregionchange="regionchange" scale="15" show-location enable-traffic="true" bindmarkertap="stall"
+enable-building="true" >
+</map>
+
+<!-- <button type='primary' bindtap='selectedClick'>选择位置</button> -->
+
+<view bindtap="selectedClick">
+  <image src="https://s3.ax1x.com/2020/11/17/DZcVeg.png" class="add_icon"></image>
+</view>

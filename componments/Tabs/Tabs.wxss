@@ -1,0 +1,20 @@
+.tabs{
+    padding-top: 15rpx;
+}
+.tabs_title{
+    display: flex;
+}
+.title_item{
+    color: #8b8b8b;
+    font-weight: bold;
+    font-family: "幼圆";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    padding: 15rpx 0;
+}
+.active{
+    color:#000;
+    border-bottom: 5rpx solid red;
+}

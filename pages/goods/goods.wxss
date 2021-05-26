@@ -1,0 +1,61 @@
+/* pages/searchResult/searchResult.wxss */
+.collect {
+
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+
+  /* width: 100%; */
+  display: flex;
+  margin-top: 25rpx;
+  /* background-color: silver; */
+}
+
+.collect image {
+  width: 130px;
+  /* height: 130px; */
+  border-radius: 10px;
+}
+
+.cname {
+  margin-top: 10rpx;
+  font-size: 20px;
+  margin-left: 25rpx;
+}
+
+.collect2 {
+  display: flex;
+
+}
+
+.cprice {
+  text-decoration: line-through;
+  display: flex;
+  margin-top: 100rpx;
+  margin-left: 25rpx;
+  color: #eb5211;
+  font-size: 16px;
+}
+
+.youhui {
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  color: #eb5211;
+  font-size: 26px;
+}
+
+.collect1 {
+  display: flex;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+}
+
+.top {
+  margin-left: 20rpx;
+
+}
+
+.place {
+
+  margin-left: 60rpx;
+
+}

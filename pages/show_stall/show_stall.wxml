@@ -1,0 +1,48 @@
+<view class="pages">
+<view wx:for="{{postList}}" wx:key="{{item.id}}" class="item">
+  <image src="{{item.img}}"></image>
+  <view class="msg">
+    <view class="name">{{item.name}}</view>
+    <view class="msg1">评分  <text class="score">{{item.score}}</text></view>
+    
+    <view class="msg1">已有摊位: <text class="h_stall">{{item.h_stall}}</text></view>
+    <view class="msg1">剩余摊位: <text class="s_stall">{{item.s_stall}}</text></view>
+    <view class="msg1">已浏览次数：{{item.sum}}</view>
+    <view class="msg1">上次摆摊时间：</view>
+    <view class= "time"> {{item.last_time}}</view>
+</view>
+</view>
+
+<view wx:for="{{postList}}" wx:key="{{item.id}}" class="title">
+  <view class="title_jianjie">摊位简介</view>
+  <view>{{item.title}}</view>
+</view>
+
+<view class="goods_header">在售商品</view>
+
+<view class="goods">
+  <scroll-view scroll-x>
+  <view wx:for="{{goods}}" wx:key="{{item.id}}" class="goods_title"  bindtap="show_goods" data-index="{{item.gid}}">
+    <view><image src="{{item.gimg}}" class="goods_img"></image></view>
+    <view class="goods_name">{{item.gname}}</view>
+    <view class="goods_view">摊主：{{item.gtitle}}</view>
+  </view>
+  </scroll-view>
+</view>
+
+<view class="adddetail">
+  <view class="collect" bindtap="collect">
+    <image mode="widthFix" src="{{src}}" />
+    <view class="collect1">收藏</view>
+  </view>
+  <view class="collect">
+    <contact-button type="default-dark" size="20" session-from="weapp"></contact-button>
+    <view class="collect1">客服</view>
+  </view>
+  <view class="collect" bindtap='share'>
+    <image mode="widthFix" src="https://s3.ax1x.com/2020/12/01/DhSmjJ.png" />
+    <view class="collect1" >分享</view>
+  </view>
+  <button class="add_icon" bindtap="subscribe" style=" background-color: {{color}};">{{editText}}</button>
+</view>
+</view>

@@ -1,0 +1,49 @@
+<view class='index'>
+   <view class="head">
+   <view class='sct'>发帖子</view>
+   <button bindtap="send" class="btn3" size="mini">
+        <text class="sc2">发布</text> 
+   </button> 
+ </view>
+ <view class="body">
+   <view class='sccv'>
+     <textarea placeholder='选最棒的照片作为主图，帖子更容易被推荐哦~' minlength="{{min}}" maxlength="{{max}}" class='scct'  bindinput='inp'></textarea>
+     <text class='scm' >{{texts}}</text>
+   </view>
+ 
+   <!-- <view class='ctit' >上传图片<text>（长按图片删除）</text><text >{{imn}}0/9{{immax}}</text></view> -->
+   <view class='ci' >
+     <block wx:for="{{images}}">
+       <image src='{{item}}' data-in='{{[index]}}' class='cimage'  mode='widthFix' bindlongtap='dimage'></image>
+     </block>
+     <view class="ssa">
+     <view class='sadd'>
+         <button bindtap="uploader" class="btn" size="mini">
+     <image src='../../icons/addpic.png' class='cimage'  mode='widthFix' bindtap='chose'></image> 
+     <text class="sc">图片/视频</text> 
+    </button></view>
+     <image class="img" src="{{imgURL}}"></image>
+  </view>
+   </view>
+ </view>
+   <!--导航开始 -->
+   <view class="foot" style="position:flxed; buttom:0;">
+   <button bindtap="upload" class="btn1" size="mini">
+    <view >
+     <image src='../../icons/picture.png' class='cimage1'  mode='widthFix' bindtap='chose'></image> 
+     </view>
+   </button>
+   <button bindtap="list" class="btn2" size="mini">
+    <view >
+     <image src='../../icons/huati.png' class='cimage2'  mode='widthFix' bindtap='chose'></image> 
+     </view>
+   </button>
+ </view>
+   <!-- <view style='background:white;font-size: 30rpx;color: #03bc03;padding:0 0 0 2%;'>{{em}}</view>
+   <view style='background:white;' wx:if="{{fail!=0}}" >失败{{fail}}个</view>
+   <view class='vbt' >
+     <view class='vbtc' bindtap='cancel'>取消</view>
+     <view class='vbts' bindtap='save'>保存</view>
+     </view> -->
+ </view>
+ 

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../componments/SearchInput/SearchInput",
+    "Tabs":"../../componments/Tabs/Tabs",
+    "menu": "../../componments/menu/menu"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle":"dark"
+}

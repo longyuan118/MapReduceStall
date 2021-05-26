@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind'
+    bindconfirm='query'></input>
+  <image class="" src='http://bpic.588ku.com/element_pic/01/37/09/07573c3a6d2c4d5.jpg' bindtap='search'></image>
+
+</view>
+<view class="btn_search" wx:for="{{search_list}}" wx:key="name" bindtap="searchList" data-text="{{item.name}}">
+  {{item.name}}
+  <!-- 分割线 -->
+</view>
+<!-- 分割线 -->
+<view class="divLine"></view>
+<view class="text">
+  <text>搜索记录</text>
+  <text bindtap="delHistory">清空记录</text>
+</view>
+<view class="history">
+  <text  wx:for="{{history_list}}" wx:key="history" data-text="{{item.history}}" bindtap="searchList">{{item.history}}
+  </text>
+</view>

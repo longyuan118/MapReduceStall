@@ -1,0 +1,66 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    
+    <view class="goods" wx:for="{{goods_list}}" wx:key="gname" data-index="{{item.gid}}" bindtap="new_goods">
+      <swiper autoplay interval="4000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ff0094"
+     >
+        <swiper-item >
+          <image mode="widthFix" src="{{item.gimg}}" />
+        </swiper-item>
+        <swiper-item >
+          <image mode="widthFix" src="{{item.gimg1}}" />
+        </swiper-item>
+        <swiper-item>
+          <image mode="widthFix" src="{{item.gimg2}}" />
+        </swiper-item>
+      </swiper>
+      <view class="goods_title" >
+        <view class="goods_name">{{item.gname}}</view>
+        <view class="goods_price">￥{{item.oprice}}<text class="goods_price1">尝鲜价</text><text class=".goods_price2">￥{{item.iprice}}</text>
+        <text class="goods_price3">商品详情></text>
+        </view>
+    
+        <view class="goods_youhui">
+          <view class="goods_youhui1">￥{{item.youhui}}</view>
+          <view class="goods_youhui2">
+            <view class="goods_youhui3">新品上新 领券叠加直降</view>
+            <view  class="goods_youhui4">当日有效，先到先得</view>
+          </view>
+          <view  class="goods_youhui5">下单立减</view>
+        </view>
+    
+        <view class="goods_order">
+          <button style="width:320px">去购买 再立减{{item.youhui}}元</button>
+        </view>
+        <view class="goods_date">
+          <text>{{item.idate}}</text>
+        </view>
+      </view>
+    </view>
+
+  </block>
+
+
+  <block wx:elif="{{tabs[1].isActive}}">
+
+    <view wx:for="{{postList}}" wx:key="{{item.id}}" class="club" bindtap="club" data-index="{{item.lid}}">
+      <view class="img">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="msg">
+        <view class="name">{{item.name}}</view>
+        <view class="msg1">评分 <text class="score">{{item.score}}</text></view>
+        <view class="msg1">已有摊位: <text class="h_stall">{{item.h_stall}}</text></view>
+        <view class="msg1">剩余摊位: <text class="s_stall">{{item.s_stall}}</text></view>
+        <view class="time"> {{item.last_time}}</view>
+      </view>
+      <button class="mini-btn" type="{{type}}" size="mini">预约</button>
+    </view>
+  </block>
+
+ 
+</Tabs>
+
+
+
+

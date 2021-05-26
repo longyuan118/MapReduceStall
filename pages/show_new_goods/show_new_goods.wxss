@@ -1,0 +1,145 @@
+page {
+  background-color: #f0f0f0;
+}
+
+.image-group {
+  display: flex;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+
+.image-group image {
+  display: inline-block;
+  width: 98%;
+  /* height: 180rpx; */
+  /* margin-left: 10rpx; */
+}
+
+.goods_title {
+  background-color: #fff;
+  width: 98%;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  margin-left: 10rpx;
+}
+
+.goods_name {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.goods_price {
+  color: red;
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.goods_price1 {
+  color: red;
+  font-size: 18px;
+}
+
+.goods_price2 {
+  color: #000;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.goods_price3 {
+  color: #000;
+  font-size: 14px;
+  padding-left: 130px;
+  /* text-align: right; */
+}
+
+.goods_index {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.goods_collect {
+  color: #8a8a8a;
+}
+
+.goods_collect image {
+  width: 20px;
+}
+
+.goods_quan image {
+  width: 20px;
+}
+
+.goods_share image {
+  width: 20px;
+}
+
+.goods_quan {
+  margin-left: 180rpx;
+  color: #8a8a8a;
+}
+
+.goods_share {
+  margin-left: 150rpx;
+  color: #8a8a8a;
+}
+
+.goods_appraise {
+  margin-top: 10px;
+}
+
+.goods_appraise1 {
+  text-align: center;
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-bottom: 20rpx;
+}
+
+.goods_img {
+  width: 98%;
+  margin-left: 5rpx;
+  /* margin-top: 1rpx; */
+}
+
+.adddetail {
+  width: 98%;
+  /* height: 42px; */
+  left: 5rpx;
+  bottom: 1rpx;
+  /* right: 20px; */
+  position: fixed;
+  border-top: 1px solid rgb(223, 223, 223);
+  background-color: #fff;
+  /* display: flex; */
+  padding-top: 10rpx;
+  /* padding-left: 10rpx; */
+  padding-right: 10rpx;
+}
+
+.collect {
+  float: left;
+  margin-left: 40rpx;
+}
+
+.collect2 {
+  float: left;
+  margin-left: 0rpx;
+}
+
+.collect image {
+  width: 20px;
+  margin-left: 5rpx;
+}
+
+.collect1 {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.add_icon {
+  float: right;
+  border-radius: 30px;
+  background-color: #ffb202;
+  /* margin-right: 10rpx; */
+}

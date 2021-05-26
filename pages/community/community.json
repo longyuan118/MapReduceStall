@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "小广场",
+  "backgroundTextStyle":"dark",
+  "enablePullDownRefresh": true
+}

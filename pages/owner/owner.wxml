@@ -1,0 +1,71 @@
+<!--pages/stallholder/stallholder.wxml-->
+<view class="head">
+  <text class="txt">摊位类型</text>
+  <view class="switch-type">
+    <view class="btn {{currentSelectTripType == 'pinche' ? 'active' : ''}}" bindtap='selectedPinche' data-id='pinche'>
+      临时摊位</view>
+    <view class="btn {{currentSelectTripType == 'baoche' ? 'active' : ''}}" bindtap='selectedBaoche' data-id='baoche'>
+      永久摊位</view>
+  </view>
+</view>
+
+<view class="line"></view>
+
+<view class="tab1">
+  <text class="txt1">附近摊位</text>
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange" class="tab2">
+
+    <block wx:if="{{tabs[0].isActive}}" class="active1">
+      <!--列表-->
+      <view class="container">
+                <view class='main'>
+          <!--左列-->       
+          <scroll-view class='left_sroll' scroll-with-animation="true" scroll-y="true" style="height: 667px">
+             <block wx:for="{{left_sroll_arr}}" wx:for-index="index" wx:key="index">
+                                 <view class='unit {{left_srcoll_index == index?"alive":""}}' data-index="{{index}}"
+                bindtap="changeLeft_sroll">{{item}}</view>
+            </block>
+               </scroll-view>
+          <!--左列-->
+          <!--中列-->
+                 <view class='middle'>
+                 <scroll-view class='middle_sroll' scroll-with-animation="true" scroll-y="true" style="height: 667px">
+               <block class="text" wx:for="{{middle_sroll_arr}}" wx:for-index="index" wx:key="index">
+                                   <view class='unit {{middle_srcoll_index == index?"alive":""}}' data-index="{{index}}"
+                  bindtap="changemiddle_sroll">{{item}}</view>
+              </block>
+                 </scroll-view>
+
+                </view>
+          <!--中列-->
+          <!--右列-->
+                 <view class='right'>
+                 <scroll-view scroll-y="true" class='right_sroll' scroll-with-animation="true" style="height: 667px">
+               <block wx:for="{{right_sroll_arr}}" wx:for-index="index" wx:key="index">
+                                   <view class='unit {{right_srcoll_index == index?"alive":""}}' data-index="{{index}}"
+                  bindtap="changeright_sroll">{{item}}</view>
+              </block>
+                 </scroll-view>
+
+                </view>
+          <!--右列-->
+
+        </view>
+
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}" class="active2">
+
+    </block>
+  </Tabs>
+</view>
+
+<view class="line1"></view>
+
+
+
+
+
+<view>
+  <button class="btn1" style="width:90%"> 申请 </button>
+</view>

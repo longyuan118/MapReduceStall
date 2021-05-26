@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Tabs":"../../componments/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "新品新摊"
+}

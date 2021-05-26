@@ -1,0 +1,73 @@
+/* pages/search/search.wxss */
+.search
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:100%;
+  height:60rpx;
+  background-color:whitesmoke;
+  margin-top: 5%;
+  border:1rpx solid whitesmoke;
+  border-radius: 5rpx;
+}
+
+/* 搜索框提示文字样式 */
+.search input
+{
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+.search image
+{ 
+  width:40rpx;
+  height:40rpx;
+  padding-right:20rpx;
+}
+
+.btn_search {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 100%; /* 宽度 */
+    height: 60rpx;
+    background: white; /* 背景颜色 */
+    outline: none; /* 不显示轮廓线 */
+    font-family: Microsoft YaHei; /* 设置字体 */
+    color: black; /* 字体颜色 */
+    font-size: 18px; /* 字体大小 */
+  }
+  /*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}
+
+.text{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:100%;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+}
+.text text{
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+
+.history{
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%; /* 宽度 */
+    overflow: hidden;
+}
+.history text{
+  padding-left: 15rpx;
+  font-size: 40rpx;
+}

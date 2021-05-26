@@ -1,0 +1,20 @@
+<SearchInput></SearchInput>
+<view class="flex-row" style="display:flex;">
+
+   <view wx:for="{{array}}" class="flex-item">
+      <view>
+         <!-- mode="widthFix" style="width:50%" -->
+         <image src="{{item.imgURL}}" class="simage"></image>
+         <view class="descption">{{item.descption}}</view>
+         <view class="stext"><text space="ensp">用户{{index}}</text></view>
+         <view class="con">
+            <view class="time">{{time}}</view>
+            <image src='../../icons/good.png' class="good"></image>
+         </view>
+         <!-- <view>\n</view> -->
+      </view>
+   </view>
+</view>
+<view bindtap="adddetail">
+   <image src="https://s1.ax1x.com/2020/08/26/dRjsgg.png" class="add_icon"></image>
+</view>
